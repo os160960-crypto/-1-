@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step06_String.html</title>
+</head>
+<body>
+    <script>
+        /*
+            [ String Datatype ]
+            - 원하는 문자를 '' 안에 쓴다.
+        */
+        var nim = '선생님';
+        var addr = '서울시 강남구'; // ✅ addr 변수 정의
+
+        var myName = '나미리' + nim; // +는 연결 연산자
+        var yourName = "채성아" + nim;
+        var ourName = `팡팡유치원${nim}`;
+
+        var info1 = '나미리' + nim + ', 주소 : ' + addr;
+        console.log(info1); // ✅ 올바른 변수 이름 사용
+
+        var info2 = `나미리${nim}, 주소 : ${addr}`;
+        console.log(info2); // ✅ info2도 정상 출력
+    </script>
+</body>
+</html>
