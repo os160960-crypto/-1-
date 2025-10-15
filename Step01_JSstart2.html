@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Step01_JSstart2.html</title>
     <style>
-        h1 { color: blue;}
-        h2 {color: red; }
-        h3 { color: green;}
+        h1 { color: blue; }
+        h2 { color: red; }
+        h3 { color: green; }
     </style>
 </head>
 <body>
@@ -16,13 +16,42 @@
     <h3 id="h3Id">h3</h3>
 
     <script>
+        // 요소를 abc라는 이름으로 저장
+        var abc = document.querySelector('h1');
+        
         /*
             -자바스크립트에서 어떠한 요소 선택하는 방법 
         document.querySelector('요소')
-        
         */
-       console.log(document.querySelector('h1'));
-       document.querySelector('h1').style.color = 'purple';
+        console.log(abc);
+        abc.style.color = '#000';
+
+        /*
+            -이벤트
+            자바스크립트에서 클릭, 마우스오버, 등등.. 의 
+            상황이 발생하였을 때 이벤트가 발생하였다고 함 
+
+            클릭대상 .addEventListener('click', function(){
+            작동할 코드 작성
+        */
+        abc.addEventListener('click', function(){
+            document.querySelector('.h2Class').style.marginLeft = '50px';
+            ohsejin(); // 함수 호출
+        });
+
+        /*
+            -함수 
+            특정 기능을 다음에도 쓰기 위해 모듈화해놓는 문법
+            function 자유롭게작명(){
+            축약하고 싶은 긴 코드
+            }
+        */
+        function ohsejin(){
+            document.querySelector('#h3Id').style.opacity = 0;
+        }
+
+        // 처음 페이지 로드 시에는 호출하지 않도록 했습니다.
+        // ohsejin(); // 함수 호출
     </script>
 </body>
 </html>
